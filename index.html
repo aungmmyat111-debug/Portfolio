@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aung Myint Myat — Software Engineer</title>
+  <meta name="description" content="Portfolio of Aung Myint Myat — software engineer focused on building fast, scalable, and thoughtful web applications.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Aung Myint Myat — Software Engineer">
+  <meta property="og:description" content="Software engineer focused on building fast, scalable, and thoughtful web applications.">
+  <meta property="og:type" content="website">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Aung Myint Myat",
+    "jobTitle": "Software Engineer",
+    "url": "https://moggie.dev",
+    "knowsAbout": ["Full-Stack Development", "TypeScript", "React", "Node.js"]
+  }
+  </script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <div class="container nav-inner">
+      <a class="logo" href="#home" aria-label="moggie.dev — home">
+        <span class="logo-mark">AM</span>
+        <span class="logo-text">moggie<span class="logo-dot">.dev</span></span>
+      </a>
+
+      <nav class="nav-links" id="nav-links" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <a class="btn nav-cta" href="#contact">Get in touch</a>
+      </nav>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="hero-kicker reveal">
+            <span class="status-dot"></span> Open to work
+            <span class="kicker-sep">·</span>
+            Yangon, Myanmar
+          </p>
+
+          <h1 class="hero-title reveal" data-delay="1">
+            Aung Myint<br>Myat<span class="title-dot">.</span>
+          </h1>
+
+          <p class="hero-desc reveal" data-delay="2">
+            Software engineer building web products end-to-end — clean interfaces,
+            dependable backends, and software that feels effortless.
+          </p>
+
+          <div class="hero-actions reveal" data-delay="3">
+            <a class="btn" href="#projects">View my work</a>
+            <a class="u-link" href="#contact">Get in touch</a>
+          </div>
+
+          <ul class="hero-meta reveal" data-delay="4">
+            <li><a class="u-link" href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a class="u-link" href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a class="u-link" href="https://x.com/yourusername" target="_blank" rel="noopener noreferrer">X / Twitter</a></li>
+          </ul>
+        </div>
+
+        <figure class="hero-photo reveal" data-delay="2">
+          <img src="profile.jpg" alt="Portrait of Aung Myint Myat" width="582" height="800">
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
+      <div class="container">
+        <p class="section-kicker reveal">About</p>
+        <h2 class="section-title reveal" data-delay="1">A little about me</h2>
+
+        <div class="about-grid">
+          <div class="about-copy reveal" data-delay="2">
+            <p>
+              I&rsquo;m a software engineer with a passion for turning complex problems into
+              simple, elegant products. Over the past years I&rsquo;ve worked across the
+              stack — shipping web platforms, designing APIs, and optimizing systems
+              that handle real traffic.
+            </p>
+            <p>
+              I&rsquo;m at my best when I own a feature end-to-end: talking to users,
+              shaping the architecture, and sweating the details until it feels right.
+              Outside of work, I contribute to open source and write about the things I learn.
+            </p>
+          </div>
+
+          <dl class="facts reveal" data-delay="3">
+            <div class="fact">
+              <dt>Location</dt>
+              <dd>Yangon, Myanmar</dd>
+            </div>
+            <div class="fact">
+              <dt>Education</dt>
+              <dd>B.Sc. Computer Science</dd>
+            </div>
+            <div class="fact">
+              <dt>Languages</dt>
+              <dd>English &middot; Burmese</dd>
+            </div>
+            <div class="fact">
+              <dt>Currently</dt>
+              <dd>Junior Software Engineer</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section section-alt" id="skills">
+      <div class="container">
+        <p class="section-kicker reveal">Skills</p>
+        <h2 class="section-title reveal" data-delay="1">What I work with</h2>
+
+        <div class="skill-list">
+          <div class="skill-row reveal" data-delay="2">
+            <h3 class="skill-name">Languages</h3>
+            <p class="skill-items">TypeScript, JavaScript, Python, Go, SQL</p>
+          </div>
+          <div class="skill-row reveal" data-delay="3">
+            <h3 class="skill-name">Frontend</h3>
+            <p class="skill-items">React, Next.js, Vue, Tailwind CSS, Figma</p>
+          </div>
+          <div class="skill-row reveal" data-delay="4">
+            <h3 class="skill-name">Backend &amp; Data</h3>
+            <p class="skill-items">Node.js, PostgreSQL, Redis, GraphQL, Docker</p>
+          </div>
+          <div class="skill-row reveal" data-delay="5">
+            <h3 class="skill-name">Tools &amp; Practices</h3>
+            <p class="skill-items">AWS, CI/CD, Git, Testing, Agile</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section" id="experience">
+      <div class="container">
+        <p class="section-kicker reveal">Experience</p>
+        <h2 class="section-title reveal" data-delay="1">Where I&rsquo;ve worked</h2>
+
+        <div class="exp-list">
+          <article class="exp-row reveal" data-delay="2">
+            <div class="exp-side">
+              <span class="exp-years">2023 — Now</span>
+              <span class="exp-type">Full-time</span>
+            </div>
+            <div class="exp-body">
+              <h3 class="exp-role">Senior Software Engineer</h3>
+              <p class="exp-org">Nova Labs</p>
+              <ul class="exp-points">
+                <li>Led architecture of a multi-tenant SaaS platform serving 40k+ users, cutting page-load times by 60%.</li>
+                <li>Designed event-driven pipelines processing millions of records daily; mentored a team of 4 engineers.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="exp-row reveal" data-delay="3">
+            <div class="exp-side">
+              <span class="exp-years">2021 — 2023</span>
+              <span class="exp-type">Full-time</span>
+            </div>
+            <div class="exp-body">
+              <h3 class="exp-role">Full-Stack Developer</h3>
+              <p class="exp-org">Brightwave</p>
+              <ul class="exp-points">
+                <li>Shipped 15+ customer-facing features end-to-end with React and Node.js across 3 product releases.</li>
+                <li>Introduced automated testing and CI, raising deployment frequency from monthly to weekly.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="exp-row reveal" data-delay="4">
+            <div class="exp-side">
+              <span class="exp-years">2020 — 2021</span>
+              <span class="exp-type">Full-time</span>
+            </div>
+            <div class="exp-body">
+              <h3 class="exp-role">Software Engineer</h3>
+              <p class="exp-org">PixelForge Studio</p>
+              <ul class="exp-points">
+                <li>Built and maintained client web applications and REST APIs in a small, fast-moving team.</li>
+                <li>Reduced API response times by 45% through query optimization and caching.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="section section-alt" id="projects">
+      <div class="container">
+        <p class="section-kicker reveal">Projects</p>
+        <h2 class="section-title reveal" data-delay="1">Selected work</h2>
+
+        <div class="projects-grid">
+
+          <article class="project featured reveal" data-delay="2">
+            <div class="project-visual v-board" aria-hidden="true">
+              <div class="board-cols"><i></i><i class="ink"></i><i></i><i></i></div>
+            </div>
+            <div class="project-body">
+              <div class="project-head">
+                <h3 class="project-title">TaskFlow</h3>
+                <span class="project-year">2026</span>
+              </div>
+              <p class="project-desc">
+                Real-time project management platform with kanban boards, collaborative
+                editing, and granular permissions for distributed teams.
+              </p>
+              <ul class="project-tags">
+                <li>Next.js</li><li>TypeScript</li><li>PostgreSQL</li><li>WebSockets</li>
+              </ul>
+              <div class="project-links">
+                <a class="u-link" href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a class="u-link" href="https://example.com" target="_blank" rel="noopener noreferrer">Live demo</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal" data-delay="3">
+            <div class="project-visual v-chart" aria-hidden="true">
+              <div class="chart-bars">
+                <i style="--h:45%"></i><i style="--h:70%"></i><i class="ink" style="--h:84%"></i>
+                <i style="--h:56%"></i><i style="--h:92%"></i><i style="--h:64%"></i>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-head">
+                <h3 class="project-title">DevMetrics</h3>
+                <span class="project-year">2025</span>
+              </div>
+              <p class="project-desc">
+                CI/CD analytics dashboard that turns pipeline data into clear,
+                actionable engineering metrics for platform teams.
+              </p>
+              <ul class="project-tags">
+                <li>React</li><li>Go</li><li>D3.js</li>
+              </ul>
+              <div class="project-links">
+                <a class="u-link" href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a class="u-link" href="https://example.com" target="_blank" rel="noopener noreferrer">Live demo</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal" data-delay="4">
+            <div class="project-visual v-cards" aria-hidden="true">
+              <div class="stack-cards"><i></i><i class="ink"></i><i></i></div>
+            </div>
+            <div class="project-body">
+              <div class="project-head">
+                <h3 class="project-title">ShopStack</h3>
+                <span class="project-year">2025</span>
+              </div>
+              <p class="project-desc">
+                Headless e-commerce storefront with instant search, cart, and
+                checkout — built on a GraphQL backend with Stripe payments.
+              </p>
+              <ul class="project-tags">
+                <li>Next.js</li><li>GraphQL</li><li>Stripe</li>
+              </ul>
+              <div class="project-links">
+                <a class="u-link" href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a class="u-link" href="https://example.com" target="_blank" rel="noopener noreferrer">Live demo</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal" data-delay="5">
+            <div class="project-visual v-link" aria-hidden="true">
+              <div class="link-art">
+                <span class="link-line"></span>
+                <span class="link-dot"></span>
+                <span class="link-arrow">&#8599;</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-head">
+                <h3 class="project-title">LinkPulse</h3>
+                <span class="project-year">2024</span>
+              </div>
+              <p class="project-desc">
+                Blazing-fast link shortener with real-time click analytics,
+                custom domains, and an open REST API.
+              </p>
+              <ul class="project-tags">
+                <li>Node.js</li><li>Redis</li><li>ClickHouse</li>
+              </ul>
+              <div class="project-links">
+                <a class="u-link" href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a class="u-link" href="https://example.com" target="_blank" rel="noopener noreferrer">Live demo</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <p class="section-kicker center reveal">Contact</p>
+        <h2 class="section-title contact-title reveal" data-delay="1">Let&rsquo;s work together</h2>
+        <p class="contact-sub reveal" data-delay="2">
+          I&rsquo;m open to full-time roles, freelance work, and interesting collaborations.
+          My inbox is always open — I&rsquo;ll get back to you within a day.
+        </p>
+
+        <div class="contact-actions reveal" data-delay="3">
+          <a class="mail-link" href="mailto:hello@aungmyintmyat.dev">hello@aungmyintmyat.dev</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year">2026</span> Aung Myint Myat</p>
+      <p class="footer-note">Set in Manrope &amp; IBM Plex Mono. Built by hand.</p>
+      <a class="u-link" href="#home">Back to top</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
