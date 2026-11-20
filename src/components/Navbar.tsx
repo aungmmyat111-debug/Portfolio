@@ -64,10 +64,10 @@ export function Navbar() {
         <nav
           aria-label="Primary"
           className={cn(
-            "flex items-center justify-between rounded-2xl border bg-zinc-950/60 px-3 py-2.5 backdrop-blur-md transition-all duration-300 sm:px-4",
+            "flex items-center justify-between rounded-2xl border bg-white/80 px-3 py-2.5 backdrop-blur-md transition-all duration-300 sm:px-4",
             scrolled
-              ? "border-white/15 shadow-lg shadow-black/30"
-              : "border-white/10",
+              ? "border-indigo-100 shadow-[0_8px_32px_-12px_rgba(79,70,229,0.25)]"
+              : "border-transparent",
           )}
         >
           {/* Monogram / logo */}
@@ -76,12 +76,12 @@ export function Navbar() {
             aria-label={`${profile.domain} — home`}
             className="flex items-center gap-2.5 rounded-xl focus-visible:ring-2 focus-visible:ring-accent outline-none"
           >
-            <span className="grid h-7 w-7 place-items-center rounded-lg border border-white/10 bg-gradient-to-br from-indigo-500/30 to-indigo-500/5 font-mono text-[11px] font-semibold text-indigo-200">
+            <span className="grid h-7 w-7 place-items-center rounded-lg bg-gradient-to-br from-indigo-500 via-purple-500 to-cyan-400 font-mono text-[11px] font-bold text-white shadow-[0_2px_10px_rgba(99,102,241,0.4)]">
               {profile.monogram}
             </span>
-            <span className="font-mono text-sm text-zinc-300">
+            <span className="font-display text-sm font-semibold text-zinc-800">
               {profile.domain.replace(".dev", "")}
-              <span className="text-accent-soft">.dev</span>
+              <span className="text-gradient">.dev</span>
             </span>
           </a>
 
@@ -93,10 +93,10 @@ export function Navbar() {
                 href={`#${link.id}`}
                 aria-current={active === link.id ? "true" : undefined}
                 className={cn(
-                  "rounded-full px-3.5 py-1.5 text-sm transition-colors focus-visible:ring-2 focus-visible:ring-accent outline-none",
+                  "rounded-full px-3.5 py-1.5 text-sm font-medium transition-colors focus-visible:ring-2 focus-visible:ring-accent outline-none",
                   active === link.id
-                    ? "bg-white/10 text-zinc-50"
-                    : "text-zinc-400 hover:bg-white/5 hover:text-zinc-100",
+                    ? "bg-indigo-50 text-indigo-600"
+                    : "text-zinc-500 hover:bg-zinc-100/70 hover:text-zinc-900",
                 )}
               >
                 {link.label}
@@ -111,7 +111,7 @@ export function Navbar() {
               {...(cta.external
                 ? { target: "_blank", rel: "noopener noreferrer" }
                 : {})}
-              className="hidden items-center gap-1.5 rounded-full bg-zinc-50 px-4 py-1.5 text-sm font-medium text-zinc-900 transition-colors hover:bg-white focus-visible:ring-2 focus-visible:ring-accent outline-none md:inline-flex"
+              className="hidden items-center gap-1.5 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 px-4 py-1.5 text-sm font-semibold text-white shadow-[0_4px_16px_-4px_rgba(99,102,241,0.5)] transition-all duration-200 hover:brightness-110 focus-visible:ring-2 focus-visible:ring-accent outline-none md:inline-flex"
             >
               {cta.label}
               <ArrowUpRight className="h-3.5 w-3.5" />
@@ -122,7 +122,7 @@ export function Navbar() {
               aria-expanded={open}
               aria-controls="mobile-menu"
               aria-label={open ? "Close menu" : "Open menu"}
-              className="grid h-9 w-9 place-items-center rounded-xl border border-white/10 text-zinc-300 transition-colors hover:bg-white/5 hover:text-zinc-50 focus-visible:ring-2 focus-visible:ring-accent outline-none md:hidden"
+              className="grid h-9 w-9 place-items-center rounded-xl border border-zinc-200 text-zinc-600 transition-colors hover:bg-zinc-100 hover:text-zinc-900 focus-visible:ring-2 focus-visible:ring-accent outline-none md:hidden"
             >
               <AnimatePresence mode="wait" initial={false}>
                 <motion.span
@@ -148,7 +148,7 @@ export function Navbar() {
               animate={{ opacity: 1, height: "auto", y: 0 }}
               exit={{ opacity: 0, height: 0, y: -6 }}
               transition={{ duration: 0.28, ease: [0.21, 0.47, 0.32, 0.98] }}
-              className="mt-2 overflow-hidden rounded-2xl border border-white/10 bg-zinc-950/85 backdrop-blur-xl md:hidden"
+              className="mt-2 overflow-hidden rounded-2xl border border-indigo-100 bg-white/95 shadow-[0_16px_40px_-16px_rgba(79,70,229,0.3)] backdrop-blur-xl md:hidden"
             >
               <div className="flex flex-col gap-1 p-3">
                 {LINKS.map((link) => (
@@ -157,10 +157,10 @@ export function Navbar() {
                     href={`#${link.id}`}
                     onClick={() => setOpen(false)}
                     className={cn(
-                      "rounded-xl px-4 py-2.5 text-base transition-colors",
+                      "rounded-xl px-4 py-2.5 text-base font-medium transition-colors",
                       active === link.id
-                        ? "bg-white/10 text-zinc-50"
-                        : "text-zinc-400 hover:bg-white/5 hover:text-zinc-100",
+                        ? "bg-indigo-50 text-indigo-600"
+                        : "text-zinc-500 hover:bg-zinc-100/70 hover:text-zinc-900",
                     )}
                   >
                     {link.label}
@@ -172,7 +172,7 @@ export function Navbar() {
                     ? { target: "_blank", rel: "noopener noreferrer" }
                     : {})}
                   onClick={() => setOpen(false)}
-                  className="mt-2 inline-flex items-center justify-center gap-1.5 rounded-xl bg-zinc-50 px-4 py-2.5 text-sm font-medium text-zinc-900 transition-colors hover:bg-white"
+                  className="mt-2 inline-flex items-center justify-center gap-1.5 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-500 px-4 py-2.5 text-sm font-semibold text-white shadow-[0_4px_16px_-4px_rgba(99,102,241,0.5)]"
                 >
                   {cta.label}
                   <ArrowUpRight className="h-3.5 w-3.5" />

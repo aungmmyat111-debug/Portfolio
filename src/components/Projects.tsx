@@ -39,7 +39,7 @@ function ProjectCard({
       onMouseMove={onMove}
       onClick={onOpen}
       className={cn(
-        "group relative flex cursor-pointer flex-col overflow-hidden rounded-2xl border border-white/10 bg-surface/70 backdrop-blur-sm transition-colors duration-300 hover:border-indigo-400/40",
+        "border-gradient shadow-card group relative flex cursor-pointer flex-col overflow-hidden rounded-2xl transition-shadow duration-300 hover:shadow-card-hover",
         project.featured && "md:col-span-2",
       )}
     >
@@ -51,21 +51,21 @@ function ProjectCard({
       {/* Body */}
       <div className="flex flex-1 flex-col gap-3 p-6 pt-2">
         <div className="flex items-baseline justify-between gap-4">
-          <h3 className="text-lg font-semibold tracking-tight text-zinc-100 transition-colors group-hover:text-zinc-50">
+          <h3 className="font-display text-lg font-bold tracking-tight text-zinc-900">
             {project.name}
           </h3>
-          <span className="shrink-0 font-mono text-xs text-zinc-500">
+          <span className="shrink-0 font-mono text-xs text-zinc-400">
             {project.year}
           </span>
         </div>
 
-        <p className="text-sm leading-relaxed text-zinc-400">{project.tagline}</p>
+        <p className="text-sm leading-relaxed text-zinc-600">{project.tagline}</p>
 
         <ul className="flex flex-wrap gap-1.5">
           {project.tech.map((tech) => (
             <li
               key={tech}
-              className="rounded-full border border-white/10 bg-white/[0.03] px-2.5 py-1 font-mono text-[11px] text-zinc-400"
+              className="rounded-full border border-zinc-200 bg-zinc-50 px-2.5 py-1 font-mono text-[11px] text-zinc-500"
             >
               {tech}
             </li>
@@ -79,7 +79,7 @@ function ProjectCard({
               target="_blank"
               rel="noopener noreferrer"
               onClick={(e) => e.stopPropagation()}
-              className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3.5 py-1.5 text-xs text-zinc-300 transition-colors hover:border-indigo-400/40 hover:text-zinc-100 focus-visible:ring-2 focus-visible:ring-accent outline-none"
+              className="inline-flex items-center gap-1.5 rounded-full border border-zinc-200 bg-white px-3.5 py-1.5 text-xs font-medium text-zinc-600 transition-all duration-200 hover:border-indigo-300 hover:bg-indigo-50 hover:text-indigo-700 focus-visible:ring-2 focus-visible:ring-accent outline-none"
             >
               <ExternalLink className="h-3.5 w-3.5" />
               Live demo
@@ -91,7 +91,7 @@ function ProjectCard({
               target="_blank"
               rel="noopener noreferrer"
               onClick={(e) => e.stopPropagation()}
-              className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3.5 py-1.5 text-xs text-zinc-300 transition-colors hover:border-indigo-400/40 hover:text-zinc-100 focus-visible:ring-2 focus-visible:ring-accent outline-none"
+              className="inline-flex items-center gap-1.5 rounded-full border border-zinc-200 bg-white px-3.5 py-1.5 text-xs font-medium text-zinc-600 transition-all duration-200 hover:border-indigo-300 hover:bg-indigo-50 hover:text-indigo-700 focus-visible:ring-2 focus-visible:ring-accent outline-none"
             >
               <GitHubIcon className="h-3.5 w-3.5" />
               Code
@@ -103,7 +103,7 @@ function ProjectCard({
               e.stopPropagation();
               onOpen();
             }}
-            className="ml-auto inline-flex items-center gap-1 rounded-full px-2 py-1.5 text-xs font-medium text-indigo-300 transition-colors hover:text-indigo-200 focus-visible:ring-2 focus-visible:ring-accent outline-none"
+            className="ml-auto inline-flex items-center gap-1 rounded-full px-2 py-1.5 text-xs font-semibold text-indigo-600 transition-colors hover:text-indigo-500 focus-visible:ring-2 focus-visible:ring-accent outline-none"
           >
             Case study
             <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -117,7 +117,7 @@ function ProjectCard({
         className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
         style={{
           background:
-            "radial-gradient(420px circle at var(--mx, 50%) var(--my, 30%), rgb(99 102 241 / 0.10), transparent 65%)",
+            "radial-gradient(420px circle at var(--mx, 50%) var(--my, 30%), rgb(168 85 247 / 0.08), transparent 65%)",
         }}
       />
     </motion.article>
@@ -136,7 +136,7 @@ function CaseSection({
 }) {
   return (
     <div>
-      <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-accent-soft">
+      <p className="font-mono text-[11px] font-medium uppercase tracking-[0.25em] text-indigo-500">
         {label}
       </p>
       <div className="mt-3">{children}</div>
@@ -177,7 +177,7 @@ function CaseStudyModal({
         exit={{ opacity: 0 }}
         transition={{ duration: 0.2 }}
         onClick={onClose}
-        className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+        className="absolute inset-0 bg-indigo-950/30 backdrop-blur-sm"
       />
       <motion.div
         role="dialog"
@@ -187,11 +187,11 @@ function CaseStudyModal({
         animate={{ opacity: 1, y: 0, scale: 1 }}
         exit={{ opacity: 0, y: 24, scale: 0.98 }}
         transition={{ duration: 0.3, ease: EASE }}
-        className="relative z-10 max-h-[88vh] w-full max-w-2xl overflow-y-auto rounded-t-2xl border border-white/10 bg-[#101014] shadow-2xl shadow-black/60 sm:rounded-2xl"
+        className="relative z-10 max-h-[88vh] w-full max-w-2xl overflow-y-auto rounded-t-2xl border border-indigo-100 bg-white shadow-[0_24px_64px_-16px_rgba(49,46,129,0.35)] sm:rounded-2xl"
       >
         {/* Sticky header */}
-        <div className="sticky top-0 z-10 flex items-center justify-between border-b border-white/10 bg-[#101014]/95 px-6 py-4 backdrop-blur">
-          <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-accent-soft">
+        <div className="sticky top-0 z-10 flex items-center justify-between border-b border-zinc-100 bg-white/95 px-6 py-4 backdrop-blur">
+          <p className="font-mono text-[11px] font-medium uppercase tracking-[0.25em] text-indigo-500">
             Case study
           </p>
           <button
@@ -199,7 +199,7 @@ function CaseStudyModal({
             type="button"
             onClick={onClose}
             aria-label="Close case study"
-            className="grid h-8 w-8 place-items-center rounded-full border border-white/10 text-zinc-400 transition-colors hover:border-white/25 hover:text-zinc-100 focus-visible:ring-2 focus-visible:ring-accent outline-none"
+            className="grid h-8 w-8 place-items-center rounded-full border border-zinc-200 text-zinc-500 transition-colors hover:border-indigo-300 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-accent outline-none"
           >
             <X className="h-4 w-4" />
           </button>
@@ -211,22 +211,22 @@ function CaseStudyModal({
             <div className="flex items-baseline justify-between gap-4">
               <h3
                 id="case-study-title"
-                className="text-2xl font-bold tracking-tight text-zinc-50"
+                className="font-display text-2xl font-bold tracking-tight text-zinc-900"
               >
                 {project.name}
               </h3>
-              <span className="shrink-0 font-mono text-xs text-zinc-500">
+              <span className="shrink-0 font-mono text-xs text-zinc-400">
                 {project.year}
               </span>
             </div>
-            <p className="mt-2 text-sm leading-relaxed text-zinc-400">
+            <p className="mt-2 text-sm leading-relaxed text-zinc-600">
               {project.tagline}
             </p>
             <ul className="mt-4 flex flex-wrap gap-1.5">
               {project.tech.map((tech) => (
                 <li
                   key={tech}
-                  className="rounded-full border border-white/10 bg-white/[0.03] px-2.5 py-1 font-mono text-[11px] text-zinc-400"
+                  className="rounded-full border border-zinc-200 bg-zinc-50 px-2.5 py-1 font-mono text-[11px] text-zinc-500"
                 >
                   {tech}
                 </li>
@@ -235,7 +235,7 @@ function CaseStudyModal({
           </div>
 
           <CaseSection label="The problem">
-            <p className="text-sm leading-relaxed text-zinc-400">
+            <p className="text-sm leading-relaxed text-zinc-600">
               {project.caseStudy.problem}
             </p>
           </CaseSection>
@@ -245,9 +245,9 @@ function CaseStudyModal({
               {project.caseStudy.architecture.map((item) => (
                 <li
                   key={item}
-                  className="flex gap-2.5 text-sm leading-relaxed text-zinc-400"
+                  className="flex gap-2.5 text-sm leading-relaxed text-zinc-600"
                 >
-                  <span className="mt-[1px] shrink-0 text-indigo-400">▸</span>
+                  <span className="mt-[1px] shrink-0 text-indigo-500">▸</span>
                   {item}
                 </li>
               ))}
@@ -259,9 +259,9 @@ function CaseStudyModal({
               {project.caseStudy.results.map((result) => (
                 <li
                   key={result}
-                  className="flex gap-2.5 text-sm leading-relaxed text-zinc-300"
+                  className="flex gap-2.5 text-sm font-medium leading-relaxed text-zinc-800"
                 >
-                  <CheckCircle2 className="mt-[3px] h-4 w-4 shrink-0 text-emerald-400" />
+                  <CheckCircle2 className="mt-[3px] h-4 w-4 shrink-0 text-emerald-500" />
                   {result}
                 </li>
               ))}
@@ -270,13 +270,13 @@ function CaseStudyModal({
 
           {/* Links */}
           {(project.demo || project.repo) && (
-            <div className="flex flex-wrap gap-2.5 border-t border-white/10 pt-5">
+            <div className="flex flex-wrap gap-2.5 border-t border-zinc-100 pt-5">
               {project.demo && (
                 <a
                   href={project.demo}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full bg-zinc-50 px-4 py-2 text-sm font-medium text-zinc-900 transition-colors hover:bg-white focus-visible:ring-2 focus-visible:ring-accent outline-none"
+                  className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 px-4 py-2 text-sm font-semibold text-white shadow-[0_4px_16px_-4px_rgba(99,102,241,0.5)] transition-all duration-200 hover:brightness-110 focus-visible:ring-2 focus-visible:ring-accent outline-none"
                 >
                   <ExternalLink className="h-4 w-4" />
                   Live demo
@@ -287,7 +287,7 @@ function CaseStudyModal({
                   href={project.repo}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-zinc-200 transition-colors hover:border-white/25 hover:bg-white/10 focus-visible:ring-2 focus-visible:ring-accent outline-none"
+                  className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-white px-4 py-2 text-sm font-medium text-zinc-700 transition-colors hover:border-indigo-300 hover:bg-indigo-50 hover:text-indigo-700 focus-visible:ring-2 focus-visible:ring-accent outline-none"
                 >
                   <GitHubIcon className="h-4 w-4" />
                   View source

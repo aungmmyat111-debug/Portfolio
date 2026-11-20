@@ -44,10 +44,10 @@ export function ToastProvider({ children }: { children: ReactNode }) {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 8, scale: 0.97 }}
               transition={{ duration: 0.25, ease: "easeOut" }}
-              className="pointer-events-auto flex items-center gap-2.5 rounded-full border border-white/10 bg-zinc-900/90 px-4 py-2.5 font-mono text-xs text-zinc-100 shadow-xl shadow-black/40 backdrop-blur-md"
+              className="pointer-events-auto flex items-center gap-2.5 rounded-full border border-indigo-200 bg-white px-4 py-2.5 font-mono text-xs text-zinc-800 shadow-[0_12px_32px_-8px_rgba(49,46,129,0.35)] backdrop-blur-md"
             >
-              <span className="grid h-5 w-5 place-items-center rounded-full bg-emerald-500/20">
-                <Check className="h-3 w-3 text-emerald-400" />
+              <span className="grid h-5 w-5 place-items-center rounded-full bg-emerald-100">
+                <Check className="h-3 w-3 text-emerald-600" />
               </span>
               {toast.message}
             </motion.div>

@@ -34,7 +34,7 @@ export function SocialLinks({
             aria-label={social.label}
             title={social.label}
             className={cn(
-              "grid h-10 w-10 place-items-center rounded-full border border-white/10 bg-white/[0.03] text-zinc-400 transition-all duration-200 hover:-translate-y-0.5 hover:border-indigo-400/40 hover:bg-indigo-500/10 hover:text-zinc-100 focus-visible:ring-2 focus-visible:ring-accent outline-none",
+              "grid h-10 w-10 place-items-center rounded-full border border-zinc-200 bg-white text-zinc-500 shadow-[0_2px_6px_-2px_rgba(24,26,42,0.08)] transition-all duration-200 hover:-translate-y-0.5 hover:border-indigo-300 hover:bg-indigo-50 hover:text-indigo-600 hover:shadow-[0_6px_16px_-4px_rgba(99,102,241,0.4)] focus-visible:ring-2 focus-visible:ring-accent outline-none",
               itemClassName,
             )}
           >

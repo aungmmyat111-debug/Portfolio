@@ -22,18 +22,19 @@ export function SectionHeading({
     >
       <motion.p
         variants={fadeUp}
-        className="font-mono text-[11px] uppercase tracking-[0.25em] text-accent-soft"
+        className="inline-flex items-center gap-2 rounded-full border border-indigo-100 bg-white px-4 py-1 font-mono text-[11px] font-medium uppercase tracking-[0.25em] text-indigo-600 shadow-[0_4px_16px_-8px_rgba(79,70,229,0.35)]"
       >
+        <span className="h-1.5 w-1.5 rounded-full bg-gradient-to-br from-indigo-500 to-cyan-400 shadow-[0_0_8px_rgba(99,102,241,0.5)]" />
         {kicker}
       </motion.p>
       <motion.h2
         variants={fadeUp}
-        className="mt-3 text-3xl font-bold tracking-tight text-zinc-50 sm:text-4xl"
+        className="font-display mt-4 text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl"
       >
         {title}
       </motion.h2>
       {sub && (
-        <motion.p variants={fadeUp} className="mt-4 leading-relaxed text-zinc-400">
+        <motion.p variants={fadeUp} className="mt-4 leading-relaxed text-zinc-600">
           {sub}
         </motion.p>
       )}

@@ -21,7 +21,7 @@ export function Timeline() {
           {/* Rail */}
           <div
             aria-hidden
-            className="absolute bottom-2 left-[7px] top-2 w-px bg-gradient-to-b from-indigo-500/60 via-white/10 to-transparent"
+            className="absolute bottom-2 left-[7px] top-2 w-px bg-gradient-to-b from-indigo-400 via-purple-400/70 to-transparent"
           />
 
           {experience.map((item) => (
@@ -35,31 +35,34 @@ export function Timeline() {
                 aria-hidden
                 className="absolute left-0 top-1.5 grid h-[15px] w-[15px] place-items-center"
               >
-                <span className="absolute inset-0 rounded-full border border-indigo-400/30" />
-                <span className="h-[7px] w-[7px] rounded-full bg-indigo-400 shadow-[0_0_14px_rgba(99,102,241,0.8)]" />
+                <span className="absolute inset-0 animate-ping rounded-full bg-indigo-400/40 [animation-duration:2.5s]" />
+                <span className="absolute inset-0 rounded-full border border-indigo-300" />
+                <span className="h-[7px] w-[7px] rounded-full bg-gradient-to-br from-indigo-500 to-cyan-400 shadow-[0_0_10px_rgba(99,102,241,0.7)]" />
               </span>
 
               {/* Date column */}
               <div className="mb-1.5 md:mb-0">
-                <p className="font-mono text-sm text-zinc-500">{item.period}</p>
-                <p className="mt-1 inline-block rounded-full border border-white/10 px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider text-zinc-500">
+                <p className="font-mono text-sm font-medium text-indigo-500">
+                  {item.period}
+                </p>
+                <p className="mt-1 inline-block rounded-full border border-indigo-100 bg-indigo-50 px-2 py-0.5 font-mono text-[10px] font-medium uppercase tracking-wider text-indigo-600">
                   {item.type}
                 </p>
               </div>
 
               {/* Content */}
               <div>
-                <h3 className="text-lg font-semibold tracking-tight text-zinc-100">
+                <h3 className="font-display text-lg font-bold tracking-tight text-zinc-900">
                   {item.role}
-                  <span className="text-accent-soft"> · {item.org}</span>
+                  <span className="text-gradient"> · {item.org}</span>
                 </h3>
                 <ul className="mt-3 space-y-2">
                   {item.points.map((point) => (
                     <li
                       key={point}
-                      className="flex gap-2.5 text-sm leading-relaxed text-zinc-400"
+                      className="flex gap-2.5 text-sm leading-relaxed text-zinc-600"
                     >
-                      <span className="mt-[1px] shrink-0 text-indigo-400/80">▸</span>
+                      <span className="mt-[1px] shrink-0 text-indigo-500">▸</span>
                       {point}
                     </li>
                   ))}
